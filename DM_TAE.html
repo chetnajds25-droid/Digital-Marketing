@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Travora Tours | Digital Marketing Strategy</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --green: #2f7d5a;
+            --dark-green: #1d4f3a;
+            --light-green: #eaf5ef;
+            --cream: #faf8f2;
+            --white: #ffffff;
+            --dark: #14231d;
+            --gray: #6f7773;
+            --border: #e1e8e4;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--cream);
+            color: #17221d;
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-heading .tag {
+            color: var(--green);
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .section-heading h2 {
+            font-size: 40px;
+            margin: 10px 0;
+        }
+
+        .section-heading p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: .3s;
+            border: 2px solid transparent;
+        }
+
+        .btn-green {
+            background: var(--green);
+            color: white;
+        }
+
+        .btn-green:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px #2f7d5a44;
+        }
+
+        .btn-outline {
+            border-color: white;
+            color: white;
+            margin-left: 8px;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #17221d;
+        }
+
+        /* NAVBAR */
+
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 999;
+            background: #10251df5;
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #ffffff18;
+        }
+
+        .navbar {
+            min-height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            color: white;
+            font-size: 25px;
+            font-weight: 800;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .logo span {
+            color: #8bd4ae;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 17px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #eee;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .nav-links a:hover {
+            color: #8bd4ae;
+        }
+
+        .nav-btn {
+            background: #8bd4ae !important;
+            color: #14231d !important;
+            padding: 9px 17px;
+            border-radius: 30px;
+        }
+
+        .menu-toggle {
+            display: none;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            background:
+                linear-gradient(90deg, #0b251bd9 10%, #0b251b88 55%, #0b251b33),
+                url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=90") center/cover no-repeat;
+        }
+
+        .hero-content {
+            padding-top: 70px;
+            max-width: 720px;
+        }
+
+        .hero-label {
+            display: inline-block;
+            color: #8bd4ae;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: 72px;
+            line-height: 1.05;
+        }
+
+        .hero h1 span {
+            color: #8bd4ae;
+        }
+
+        .hero p {
+            font-size: 19px;
+            color: #eee;
+            max-width: 650px;
+            margin: 25px 0;
+        }
+
+        .hero-buttons {
+            margin-top: 25px;
+        }
+
+        /* BUSINESS PROFILE */
+
+        .about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 430px;
+            object-fit: cover;
+            border-radius: 25px;
+            display: block;
+            box-shadow: 0 20px 50px #0002;
+        }
+
+        .about-badge {
+            position: absolute;
+            bottom: 25px;
+            right: -20px;
+            background: #8bd4ae;
+            padding: 20px;
+            border-radius: 15px;
+            font-weight: 800;
+        }
+
+        .about-content h3 {
+            font-size: 32px;
+            margin-bottom: 18px;
+        }
+
+        .about-content p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        /* TARGET AUDIENCE */
+
+        .audience {
+            background: var(--dark);
+            color: white;
+        }
+
+        .audience .section-heading p {
+            color: #b7c4be;
+        }
+
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .audience-card {
+            padding: 30px;
+            border: 1px solid #ffffff18;
+            border-radius: 18px;
+            background: #ffffff08;
+            transition: .3s;
+        }
+
+        .audience-card:hover {
+            transform: translateY(-7px);
+            border-color: #8bd4ae;
+        }
+
+        .audience-icon {
+            font-size: 35px;
+            margin-bottom: 12px;
+        }
+
+        .audience-card h3 {
+            color: #8bd4ae;
+            margin-bottom: 8px;
+        }
+
+        .audience-card p {
+            color: #bbb;
+            font-size: 14px;
+        }
+
+        /* PACKAGES */
+
+        .packages {
+            background: #f2f6f3;
+        }
+
+        .package-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .package-card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px #0000000d;
+            transition: .3s;
+        }
+
+        .package-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 40px #0002;
+        }
+
+        .package-image {
+            height: 230px;
+            overflow: hidden;
+        }
+
+        .package-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .5s;
+        }
+
+        .package-card:hover img {
+            transform: scale(1.08);
+        }
+
+        .package-info {
+            padding: 22px;
+        }
+
+        .package-info h3 {
+            font-size: 20px;
+        }
+
+        .package-info p {
+            font-size: 13px;
+            color: #777;
+            margin: 7px 0;
+        }
+
+        .price {
+            font-size: 21px;
+            font-weight: 800;
+            color: var(--green);
+            margin: 12px 0;
+        }
+
+        /* SEO */
+
+        .seo {
+            background: white;
+        }
+
+        .seo-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .keyword {
+            background: #f3f7f4;
+            border: 1px solid var(--border);
+            padding: 17px 20px;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .keyword:hover {
+            transform: translateY(-3px);
+            border-color: var(--green);
+        }
+
+        /* SOCIAL MEDIA */
+
+        .social-section {
+            background: #f7faf8;
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .social-card {
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 8px 30px #0000000d;
+            transition: .3s;
+        }
+
+        .social-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .social-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .social-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .social-card p {
+            color: #777;
+            font-size: 14px;
+        }
+
+        .social-card .handle {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--green);
+            font-weight: 700;
+        }
+
+        /* ADVERTISEMENT */
+
+        .advertisement {
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            background:
+                linear-gradient(#082218bb, #082218bb),
+                url("https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1800&q=90") center/cover;
+        }
+
+        .ad-content {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .ad-content .sale {
+            color: #8bd4ae;
+            font-weight: 800;
+            letter-spacing: 3px;
+        }
+
+        .ad-content h2 {
+            font-size: 55px;
+            line-height: 1.1;
+            margin: 15px 0;
+        }
+
+        .ad-content p {
+            color: #ddd;
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        /* EMAIL MARKETING */
+
+        .email {
+            background: #dff1e6;
+        }
+
+        .email-box {
+            background: #14231d;
+            color: white;
+            padding: 55px;
+            border-radius: 25px;
+            text-align: center;
+        }
+
+        .email-box h2 {
+            font-size: 38px;
+        }
+
+        .email-box p {
+            color: #bbb;
+            max-width: 650px;
+            margin: 12px auto 25px;
+        }
+
+        .email-form {
+            display: flex;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .email-form input {
+            flex: 1;
+            padding: 16px 20px;
+            border: none;
+            outline: none;
+            border-radius: 50px 0 0 50px;
+            font-family: inherit;
+        }
+
+        .email-form button {
+            border: none;
+            padding: 0 25px;
+            background: #8bd4ae;
+            font-weight: 800;
+            border-radius: 0 50px 50px 0;
+            cursor: pointer;
+        }
+
+        /* BUSINESS IMPROVEMENT */
+
+        .improvement {
+            background: white;
+        }
+
+        .improvement-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .improvement-card {
+            padding: 28px;
+            border-radius: 17px;
+            background: #fafcfb;
+            border: 1px solid var(--border);
+            transition: .3s;
+        }
+
+        .improvement-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--green);
+        }
+
+        .improvement-card span {
+            font-size: 30px;
+        }
+
+        .improvement-card h3 {
+            margin: 10px 0;
+        }
+
+        .improvement-card p {
+            color: #777;
+            font-size: 14px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #0c1712;
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        .footer-logo {
+            font-size: 27px;
+            font-weight: 800;
+        }
+
+        .footer-logo span {
+            color: #8bd4ae;
+        }
+
+        .footer-links {
+            margin: 20px 0;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 13px;
+        }
+
+        .footer-links a:hover {
+            color: #8bd4ae;
+        }
+
+        footer p {
+            color: #777;
+            font-size: 13px;
+        }
+
+        /* MOBILE */
+
+        @media(max-width:1050px) {
+            .nav-links {
+                gap: 10px;
+            }
+
+            .nav-links a {
+                font-size: 10px;
+            }
+
+            .audience-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width:800px) {
+            section {
+                padding: 70px 0;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 75px;
+                left: 0;
+                width: 100%;
+                background: #10251d;
+                flex-direction: column;
+                padding: 25px;
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 50px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .package-grid,
+            .social-grid,
+            .improvement-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .ad-content h2 {
+                font-size: 42px;
+            }
+        }
+
+        @media(max-width:550px) {
+            .container {
+                width: 92%;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .section-heading h2 {
+                font-size: 30px;
+            }
+
+            .package-grid,
+            .audience-grid,
+            .social-grid,
+            .improvement-grid,
+            .seo-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-badge {
+                right: 10px;
+                bottom: 10px;
+            }
+
+            .ad-content h2 {
+                font-size: 34px;
+            }
+
+            .email-box {
+                padding: 35px 20px;
+            }
+
+            .email-box h2 {
+                font-size: 28px;
+            }
+
+            .email-form {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .email-form input,
+            .email-form button {
+                border-radius: 50px;
+                padding: 15px;
+            }
+
+            .btn-outline {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header>
+        <div class="container navbar">
+
+            <a href="#home" class="logo">
+                Travora <span>Tours</span>
+            </a>
+
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#business">Business Profile</a></li>
+                <li><a href="#audience">Target Audience</a></li>
+                <li><a href="#seo">SEO Keywords</a></li>
+                <li><a href="#social">Social Media</a></li>
+                <li><a href="#advertisement">Advertisement</a></li>
+                <li><a href="#email">Email Marketing</a></li>
+                <li><a href="#improvement">Suggestions</a></li>
+              <!--  <li><a href="#contact" class="nav-btn">Contact</a></li>  -->
+            </ul>
+
+        </div>
+    </header>
+
+    <!-- HOME -->
+
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+
+                <div class="hero-label">
+                    Travel Agency • Nagpur
+                </div>
+
+                <h1>
+                    TRAVORA <span>TOURS</span>
+                </h1>
+
+                <p>
+                    Explore More, Worry Less! Discover exciting destinations through
+                    carefully planned and affordable tour packages.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#packages" class="btn btn-green">Book Now</a>
+                    <a href="#business" class="btn btn-outline">Explore More</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 01 BUSINESS PROFILE -->
+
+    <section class="about" id="business">
+        <div class="container">
+
+            <div class="section-heading">
+                <div class="tag">01 • Business Profile</div>
+                <h2>About Travora Tours</h2>
+                <p>
+                    Your travel partner for exciting, affordable and memorable journeys.
+                </p>
+            </div>
+
+            <div class="about-grid">
+
+                <div class="about-image">
+                    <img src="https://i.pinimg.com/736x/1f/2c/61/1f2c61d3b4af1b92b6f00ffd96dbf232.jpg">
+                    <div class="about-badge">
+                        Explore More<br>
+                        Worry Less!
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <h3>Travel Made Simple & Memorable</h3>
+
+                    <p>
+                        Travora is a travel agency dedicated to helping customers discover
+                        exciting destinations through carefully planned and affordable tour
+                        packages.
+                    </p>
+
+                    <p>
+                        From relaxing holidays to adventurous trips, we make travelling
+                        simple, comfortable and memorable.
+                    </p>
+
+                    <a href="#packages" class="btn btn-green">Domestic Tours</a>
+		<a href="#packages" class="btn btn-green">Beach Holidays</a>
+		<a href="#packages" class="btn btn-green">Cultural Tours</a>
+ 		<a href="#packages" class="btn btn-green">Student Tours</a>
+		<a href="#packages" class="btn btn-green">Couple Holidays</a>
+		<a href="#packages" class="btn btn-green">Family Packages</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 02 TARGET AUDIENCE -->
+
+    <section class="audience" id="audience">
+        <div class="container">
+
+            <div class="section-heading">
+                <div class="tag">02 • Target Audience</div>
+                <h2>Who Are Our Travellers?</h2>
+                <p>
+                    Travora Tours offers suitable travel experiences for different types
+                    of travellers.
+                </p>
+            </div>
+
+            <div class="audience-grid">
+
+                <div class="audience-card">
+                    <div class="audience-icon">🎓</div>
+                    <h3>Students</h3>
+			<p>
+                        Age : 18-23
+                    </p>
+                    <p>
+                        Affordable group tours and adventure trips.
+                    </p>
+                </div>
+
+                <div class="audience-card">
+                    <div class="audience-icon">👨‍👩‍👧</div>
+                    <h3>Families</h3>
+			<p>
+                        Age : All age group
+                    </p>
+                    <p>
+                        Comfortable and memorable family holidays.
+                    </p>
+                </div>
+
+                <div class="audience-card">
+                    <div class="audience-icon">💼</div>
+                    <h3>Working Professionals</h3>
+			<p>
+                        Age : 18-30
+                    </p>
+                    <p>
+                        Weekend getaways and short vacations.
+                    </p>
+                </div>
+
+                <div class="audience-card">
+                    <div class="audience-icon">🏔️</div>
+                    <h3>Travel Enthusiasts</h3>
+			<p>
+                        Age : 18-50
+                    </p>
+                    <p>
+                        Adventure, nature and destination experiences.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TOUR PACKAGES -->
+
+    <section class="packages" id="packages">
+        <div class="container">
+
+            <div class="section-heading">
+                <div class="tag">Tour Packages</div>
+                <h2>Our Popular Tour Packages</h2>
+                <p>
+                    Explore popular destinations with affordable and carefully planned packages.
+                </p>
+            </div>
+
+            <div class="package-grid">
+
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=900&q=85">
+                    </div>
+                    <div class="package-info">
+                        <h3>Kashmir Escape</h3>
+                        <p><strong>5 Days / 4 Nights</strong></p>
+                        <p>Beautiful mountains, valleys and sightseeing.</p>
+                        <div class="price">Starting ₹14,999</div>
+                        <a href="#contact" class="btn btn-green">View Tour</a>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=900&q=85">
+                    </div>
+                    <div class="package-info">
+                        <h3>Goa Getaway</h3>
+                        <p><strong>4 Days / 3 Nights</strong></p>
+                        <p>Beaches, sightseeing and relaxation.</p>
+                        <div class="price">Starting ₹9,999</div>
+                        <a href="#contact" class="btn btn-green">View Tour</a>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=900&q=85">
+                    </div>
+                    <div class="package-info">
+                        <h3>Kerala Paradise</h3>
+                        <p><strong>5 Days / 4 Nights</strong></p>
+                        <p>Backwaters, nature and unforgettable experiences.</p>
+                        <div class="price">Starting ₹12,999</div>
+                        <a href="#contact" class="btn btn-green">View Tour</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 03 SEO KEYWORDS -->
+
+    <section class="seo" id="seo">
+        <div class="container">
+
+            <div class="section-heading">
+                <div class="tag">03 • SEO Keywords</div>
+                <h2>Search. Discover. Travel.</h2>
+                <p>
+                    Travora uses search engine optimization to improve its online visibility
+                    and help travellers find suitable tour packages easily.
+                </p>
+            </div>
+
+            <div class="seo-grid">
+                <div class="keyword">Travel Agency in Nagpur</div>
+                <div class="keyword">Tour Packages in Nagpur</div>
+                <div class="keyword">Affordable Tour Packages</div>
+                <div class="keyword">Best Travel Agency</div>
+                <div class="keyword">Holiday Packages</div>
+                <div class="keyword">Family Tour Packages</div>
+                <div class="keyword">Weekend Trips</div>
+                <div class="keyword">Domestic Tour Packages</div>
+                <div class="keyword">Tour Packages for Working Professionals</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 04 SOCIAL MEDIA MARKETING -->
+
+    <section class="social-section" id="social">
+        <div class="container">
+
+            <div class="section-heading">
+                <div class="tag">04 • Social Media Marketing Plan</div>
+                <h2>Promote. Engage. Travel.</h2>
+                <p>
+                    Use social media to showcase destinations, attract travellers and promote
+                    tour packages.
+                </p>
+            </div>
+
+            <div class="social-grid">
+
+                <div class="social-card">
+                    <div class="social-icon">📸</div>
+                    <h3>Instagram</h3>
+                    <p>
+                        Post destination photos, Reels, travel tips, customer experiences
+                        and tour offers.
+                    </p>
+                    <div class="handle">@travoratour_official</div>
+                </div>
+
+                <div class="social-card">
+                    <div class="social-icon">📘</div>
+                    <h3>Facebook</h3>
+                    <p>
+                        Share tour promotions, holiday packages, offers and customer reviews.
+                    </p>
+                    <div class="handle">@travoratour_official</div>
+                </div>
+
+                <div class="social-card">
+                    <div class="social-icon">💬</div>
+                    <h3>WhatsApp</h3>
+                    <p>
+                        Handle direct enquiries, share package details and provide booking
+                        assistance.
+                    </p>
+                    <div class="handle">+96XXXXXX02</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 05 ADVERTISEMENT DESIGN -->
+
+    <section class="advertisement" id="advertisement">
+        <div class="container">
+
+            <div class="ad-content">
+
+                <div class="section-heading">
+		<div class="tag">05 • Advertisement Design</div>
+                   <h3>
+			 TRAVORA TOURS • SPECIAL TRAVEL OFFER
+			</h3>
+                </div>
+
+                <h2>
+                    Explore More<br>
+                    Worry Less!
+                </h2>
+
+                <p>
+                    Kashmir Escape • Goa Getaway • Kerala Paradise<br>
+                    Affordable Packages • Comfortable Travel • Memorable Experiences
+                </p>
+
+                <a href="#packages" class="btn btn-green">Book Now</a>
+                <a href="#contact" class="btn btn-outline">Contact Us</a>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 06 EMAIL MARKETING -->
+
+    <section class="email" id="email">
+        <div class="container">
+
+            <div class="email-box">
+
+                <div class="section-heading" style="margin-bottom:20px">
+                    <div class="tag">06 • Email Marketing</div>
+                    <h2>Plan Your Next Journey</h2>
+                </div>
+
+                <p>
+                    Receive new tour packages, special offers, destination ideas and travel
+                    updates from Travora Tours.
+                </p>
+
+                <form class="email-form" onsubmit="subscribe(event)">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 07 BUSINESS IMPROVEMENT -->
+
+    <section class="improvement" id="improvement">
+        <div class="container">
+
+            <div class="section-heading">
+                <div class="tag">07 • Business Improvement Suggestions</div>
+                <h2>Grow Smarter. Travel Better.</h2>
+                <p>
+                    Digital strategies to improve visibility, customer trust and bookings.
+                </p>
+            </div>
+
+            <div class="improvement-grid">
+
+                <div class="improvement-card">
+                    <span>📍</span>
+                    <h3>Google Business Profile</h3>
+                    <p>
+                        Improve local visibility and help travellers find Travora Tours online.
+                    </p>
+                </div>
+
+                <div class="improvement-card">
+                    <span>⭐</span>
+                    <h3>Customer Reviews</h3>
+                    <p>
+                        Encourage satisfied travellers to leave reviews and build trust.
+                    </p>
+                </div>
+
+                <div class="improvement-card">
+                    <span>🎬</span>
+                    <h3>Instagram Reels</h3>
+                    <p>
+                        Post destination videos, travel tips and tour highlights regularly.
+                    </p>
+                </div>
+
+                <div class="improvement-card">
+                    <span>🎁</span>
+                    <h3>Referral Offers</h3>
+                    <p>
+                        Use offers such as “Refer a friend and get ₹500 OFF!” to attract new customers.
+                    </p>
+                </div>
+
+                <div class="improvement-card">
+                    <span>📲</span>
+                    <h3>Easy Online Booking</h3>
+                    <p>
+                        Allow customers to enquire and book through WhatsApp or an online form.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        <div class="footer-logo">
+            Travora <span>Tours</span>
+        </div>
+
+        <p>
+            Travora Tours - Digital Marketing Strategy
+        </p>
+
+        <div class="footer-links">
+            <a href="#business">Business Profile</a>
+            <a href="#audience">Target Audience</a>
+            <a href="#seo">SEO</a>
+            <a href="#social">Social Media</a>
+            <a href="#advertisement">Advertisement</a>
+            <a href="#email">Email Marketing</a>
+            <a href="#improvement">Business Improvement</a>
+        </div>
+
+        <p>
+            TAE-I Project Based Learning
+        </p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("active");
+        }
+
+        document.querySelectorAll(".nav-links a").forEach(function(link) {
+            link.addEventListener("click", function() {
+                document.getElementById("navLinks").classList.remove("active");
+            });
+        });
+
+        function subscribe(event) {
+            event.preventDefault();
+            alert("Thank you for subscribing to Travora Tours! ✈️");
+        }
+
+        function sendMessage(event) {
+            event.preventDefault();
+            alert("Thank you! Travora Tours will contact you soon. ✈️");
+        }
+    </script>
+
+</body>
+</html>
